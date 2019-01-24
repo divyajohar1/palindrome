@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        function checkPalindrome() {
+            console.log("HI", document.getElementById("str").value[2]);
+            var len = document.getElementById("str").value.length;
+            var mid = len / 2;
+            console.log("mid", mid)
+            var a = " -is Palindrome";
+            for (var i = 0; i < mid; i++) {
+                console.log("1", document.getElementById("str").value[len - 1 - i], i)
+                if (document.getElementById("str").value[i] !== document.getElementById("str").value[len - 1 - i]) {
+                    console.log("IN Here")
+                    a = " - is Not Pa..."
+                }
+            }
+            alert("HI String " + a)
+            console.log("2")
+        }
+    </script>
+    <form>
+        Enter a String/Number:
+        <input type="text" id="str" name="string" />
+        <br/>
+        <input type="submit" value="Check" onclick="checkPalindrome();" />
+    </form>
+</body>
+
+</html>
